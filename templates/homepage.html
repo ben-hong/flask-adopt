@@ -8,10 +8,13 @@
         {% for pet in pets %}
             <li>
                 <div>
-                    {{pet.name}}
-                    
+                    <a href="/pet/{{pet.id}}">{{pet.name}}</a> 
                     {{'is available' if pet.available else 'is not available'}}
-                    <img src="{{pet.photo_url}}" alt="">
+            
+            {%if pet.photo_url %}   
+                <img class="pet_image" src="{{pet.photo_url}}">
+            {%endif%}
+            
                 </div>
             </li>
         {% endfor %}

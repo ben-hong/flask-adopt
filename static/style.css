@@ -1,0 +1,8 @@
+* {
+  box-sizing: border-box;
+}
+
+.pet_image { 
+  width: 240px;
+  height:200px;  
+}
